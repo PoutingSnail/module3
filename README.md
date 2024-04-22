@@ -6,8 +6,9 @@
 |dockerfile|生成镜像配置文件|
 
 ### 构建本地镜像
-  ```
+```
   docker build  /root/httpsvr -t poutingsnail/httpsvr:v1.0
+```
 ### 编写 Dockerfile 将模块二作业编写的 httpserver 容器化
 ``` FROM ubuntu
 ENV VERSION=v1.0
