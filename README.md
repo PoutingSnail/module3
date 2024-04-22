@@ -27,7 +27,11 @@ docker push poutingsnail/httpsvr:v1.0
 httpserver    docker run -d poutingsnail/httpsvr:v1.0
 ```
 ### 通过 nsenter 进入容器查看 IP 配置  
+获取PID
 ```
-docker inspect containerid |grep -i pid
-nsenter -t pid -n ip a
+docker inspect {containerid} |grep -i pid
+```
+根据pid获取IP配置
+```
+nsenter -t {pid} -n ip a
 ```
